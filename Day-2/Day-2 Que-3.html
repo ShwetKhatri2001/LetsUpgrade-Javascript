@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Using Javascript in Body, View Console</h2>
+
+
+<script>
+  var Names =["Shwet","Raj","Tejas","Yash","Darshan","Hetav","Aviraj","Sakshi","Maitri","Vaishnavi"];
+  var str = "Hetav";
+  console.log("Finding Hetav in Names Array ..\n");
+  for(var i=0;i<Names.length;i++)
+  	 {
+  	 	if(str === Names[i])
+  	 	{
+  	 		console.log(str + "found at index '" + i +"' in the Names Array\n");
+  	 		break;
+  	 	}
+  	 }
+  if(i==Names.length)
+  	console.log(str + "is not present in the given Names Array\n");
+</script>
+
+</body>
+</html> 

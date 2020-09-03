@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Using Javascript in Body, View Console</h2>
+
+
+<script>
+  var Names =["Shwet","Dixit","Tejas","Yash","Piyush","Hetav","Kriti","Sakshi","Mahi","Vishnu"];
+  var cnt=0;
+  console.log("Finding Names containing 'a' in Names Array ..\n");
+  for(var i=0;i<Names.length;i++)
+  	 {
+  	 	if(Names[i].indexOf('a')!=-1)
+  	 	{
+  	 		console.log(Names[i] + " at index '" + i +"' in the Names Array is containing 'a' \n");
+  	 		cnt++;
+  	 	}
+  	 }
+  if(cnt==0)
+  	console.log("There is no member containing 'a' in the given Names Array\n");
+</script>
+
+</body>
+</html> 
