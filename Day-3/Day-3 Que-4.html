@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+var person = [
+  {
+    name: "Shwet",
+    age: 18,
+    country: "India",
+    hobbies: ["swimming","skating","coding"]
+
+
+  },
+  {name: "SMK",
+    age: 42,
+    country: "Canada",
+    hobbies: ["playing","singing","coding"]
+
+  },
+  {
+  	name: "Mayur",
+    age: 28,
+    country: "America",
+    hobbies: ["swimming","developing","dancing"]
+
+  },
+  {
+  	name: "Vaishnavi",
+    age: 32,
+    country: "India",
+    hobbies: ["coding","take raging"]
+
+
+}]
+
+
+function displaygreater30(){
+
+	for(var i=0;i<person.length;i++){
+    if(person[i].age<30)
+		   console.log(person[i]);
+	}
+}
+
+function displaycountryIndia(){
+
+  for(var i=0;i<person.length;i++){
+    if(person[i].country == "India")
+       console.log(person[i]);
+  }
+}
+
+</script>	
+</head>
+<body>
+
+
+
+<button onclick="displaygreater30()">Click to see Person Objects having age<30 in console</button><br><br>
+<button onclick="displaycountryIndia()">Click to see Person Objects having country India in console</button>
+
+
+</body>
+</html> 

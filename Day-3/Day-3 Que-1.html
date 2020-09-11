@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function changefirst(){
+	var img=document.getElementById("image");
+	img.src="images/frozenhot.jpg";
+	
+}
+
+
+function changeImage(){
+	var img=document.getElementById("image");
+	if(img.src == "images/frozenhot.jpg"){
+		img.src = "images/devilscake.jpg";
+	}
+	else if(img.src == "images/devilscake.jpg"){
+	    img.src = "images/sunday.jpg";
+	}
+	else if(img.src == "images/sunday.jpg"){
+    	img.src = "images/devilscake.jpg";
+	}
+    
+}
+</script>	
+</head>
+<body>
+
+<h2>Click on Buttons to change images</h2>
+
+  <img id="image" src="images/frozenhot.jpg" alt="image">
+  <br><br><br>
+  <button id="click1" onclick="changefirst()">Button-1</button>
+  <button id="click2" onclick="changeImage()">Button-2</button>
+  <button id="click3" onclick="changeImage()">Button-3</button>
+
+
+</body>
+</html> 

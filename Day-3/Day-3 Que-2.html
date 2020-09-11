@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function copyinput(){
+	document.getElementById("si").value=document.getElementById("fi").value;
+}
+
+</script>	
+</head>
+<body>
+
+
+  <br><br><br>
+  <label for="firstin">First Input:</label><br>
+  <input type="text-area" id="fi" name="firstin" placeholder="Give some Input"><br><br>
+  <button id="btn" onclick="copyinput()">Click to give same input again</button><br><br>
+  <label for="firstin">Second Input:</label><br>
+  <input type="text-area" id="si" name="secondin" placeholder="Give some Input">
+
+</body>
+</html> 
