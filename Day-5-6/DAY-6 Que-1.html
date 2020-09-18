@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-6 que-1</title>
+    <link rel="stylesheet" href="q1styles.css">
+    
+  </head>
+  <body>
+   
+
+    <div class="data">
+      <h1>Employees</h1>
+
+      <div class="search">
+        <h3>Search Employee By Name</h3><p><input
+          type="text"
+          placeholder="Enter Employee Name here"
+          id="searchName"
+          onkeyup="searchByName()"
+        /></p>
+      </div>
+
+     <div class="search">
+        <h3>Search Employee By City</h3><input
+          type="text"
+          placeholder="Enter City Name here"
+          id="searchCity"
+          onkeyup="searchByCity()"
+        />
+      </div>
+
+      <table border="1" class="table" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Sr No.</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Salary</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody class="tdata" id="tdata"></tbody>
+      </table>
+    </div>
+
+    <script src="employee.js"></script>
+    
+  </body>
+</html>
