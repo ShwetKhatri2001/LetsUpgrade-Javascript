@@ -70,10 +70,11 @@ function addBus(e) {
 
 function searchBySource() {
   let searchValue = document.getElementById("searchSource").value;
+  let searchvalue = document.getElementById("searchDestination").value;
   let allbuses = JSON.parse(localStorage.getItem("currentbuses"));
   let newdata = allbuses.filter(function (bus) {
     return (
-      bus.source.toUpperCase().indexOf(searchValue.toUpperCase()) != -1
+      bus.source.toUpperCase().indexOf(searchValue.toUpperCase()) != -1 && bus.destination.toUpperCase().indexOf(searchvalue.toUpperCase()) != -1 
     );
   });
 
@@ -82,10 +83,11 @@ function searchBySource() {
 
 function searchByDestination() {
   let searchValue = document.getElementById("searchDestination").value;
+  let searchvalue = document.getElementById("searchSource").value;
   let allbuses = JSON.parse(localStorage.getItem("currentbuses"));
   let newdata = allbuses.filter(function (bus) {
     return (
-      bus.destination.toUpperCase().indexOf(searchValue.toUpperCase()) != -1
+      bus.destination.toUpperCase().indexOf(searchValue.toUpperCase()) != -1 && bus.source.toUpperCase().indexOf(searchvalue.toUpperCase()) != -1 
     );
   });
 
