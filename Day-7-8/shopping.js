@@ -1,7 +1,5 @@
-// guys i have made it a id based application as this is how to works in real world
-// there are only 2 easy to understand changes read the code carefully
+// Hello Guys !! I have made it a id based application as this is how to works in real world
 
-// new function getProductByID() is created check it out
 
 let products = [
   {
@@ -147,7 +145,7 @@ function displayProducts(productsData, who = "productwrapper") {
     } else if (who == "cart") {
       productsString += ` <div class="product">
         <div class="prodimg">
-          <img src="productimages/product1.jpeg" width="100%" />
+          <img src="productimages/${image}" width="100%" />
         </div>
         <h3>${name}</h3>
         <p>Price : ${price}$</p>
@@ -196,10 +194,6 @@ function searchForMaxPrice(maxprice){
   displayProducts(searchmaxproducts);
 }
 
-// this is a function to get a product based on id from a particular array
-// @param 1 the array u want to get products from
-// @param 2 the id u want to search
-
 function getProductByID(productArray, id) {
   return productArray.find(function (product) {
     return product.id == id;
@@ -207,13 +201,18 @@ function getProductByID(productArray, id) {
 }
 
 function addToCart(id) {
-  // getting the product
+  
+  let currcart=cart.filter(function (currprod){
+     return currprod.id==id;
+  });
+  if(currcart.length==0){
   let pro = getProductByID(products, id);
 
-  //   putting in cart
+  //  if not available before, then putting in cart
   cart.push(pro);
   document.getElementById("cartitems").innerHTML=`Total Cart Items : ${cart.length} `;
-  displayProducts(cart, "cart");
+  displayProducts(cart, "cart");}
+  else showModal();  //othervise showing message
 }
 
 function removeFromCart(id) {
@@ -224,5 +223,27 @@ function removeFromCart(id) {
 
   //   removing from cart based on index
   cart.splice(index, 1);
+  document.getElementById("cartitems").innerHTML=`Total Cart Items : ${cart.length} `;
   displayProducts(cart, "cart");
+}
+
+
+function showModal() {
+  let modal = document.getElementsByClassName("modal")[0];
+  modal.style.display = "block";
+
+}
+
+function hideModal(event) {
+  if (event.target.className == "modal") {
+    let modal = document.getElementsByClassName("modal")[0];
+    modal.style.display = "none";
+  }
+}
+
+function hidemodal(event) {
+ 
+    let modal = document.getElementsByClassName("modal")[0];
+    modal.style.display = "none";
+  
 }
