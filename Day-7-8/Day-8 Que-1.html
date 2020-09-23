@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="d8q1styles.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Shopping 360</h1>
+      <div class="search">
+        <input
+          type="search"
+          onkeyup="searchProduct(this.value)"
+          placeholder="Search For Products"
+        />
+      </div>
+      <h4>
+      <div class="pricetags" ><h5>Minimum:</h5>
+        <input
+          type="search"
+          onkeyup="searchForMinPrice(this.value)"
+          placeholder="Minimum Price"
+          id="minprice"
+        /></div><div class="pricetags">
+      <h5>Maximum:</h5>
+        <input
+          type="search"
+          onkeyup="searchForMaxPrice(this.value)"
+          placeholder="Maximum Price"
+          id="maxprice"
+        />
+      </div>
+    </h4>
+
+    </div>
+
+    <div class="products">
+      <div class="productwrapper" id="productwrapper"></div>
+    </div>
+
+    <div class="products">
+      <h1>Cart</h1><h3 id="cartitems"></h3>
+      <div class="productwrapper" id="cart"></div>
+    </div>
+
+    <script src="shopping.js"></script>
+  </body>
+</html>
