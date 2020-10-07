@@ -2,7 +2,7 @@
 
 * It was a Beginner to Intermediate course in Javascript devided into 8 days , which included some assignments and mini-projects , too.
 
-![Course Completion Certification](https://github.com/shwetkhatri2001/coursera-webd-solution/blob/master/LetsUpgradeCertificate.png)
+![Course Completion Certification](https://github.com/shwetkhatri2001/coursera-webd-solution/blob/master/LUCertificate.png)
 
 * Topics and Assignments/ Projects : 
 
